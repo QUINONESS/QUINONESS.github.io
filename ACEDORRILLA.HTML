@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>PLANT MASTER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+
+  <button onclick="mostrarTelefono()">NUMERO DE TELEFONO</button>
+  <button onclick="window.location.href = 'index.html'">INICIO</button>
+
+  <script>
+    function mostrarTelefono() {
+      const boton = document.querySelector('button');
+      boton.textContent = '+1 (800) 242-8478'; 
+      setTimeout(() => {
+        location.reload();
+      }, 5000); 
+    }
+
+    // Script para agrandar la imagen al hacer clic
+    function toggleImageSize() {
+      const img = document.getElementById('imagenAgrandable');
+      img.classList.toggle('agrandada');
+    }
+  </script>
+
+  <style>
+    button {
+      align-items: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family:'Times New Roman', Times, serif;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </STYLE>
+  <style>
+  
+    body {
+      background-color:rgba(94, 151, 94, 0.642);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+    }
+    p {
+      
+      text-align: center; 
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      
+    }
+    h1 {
+      text-align: center; 
+      color: rgb(26, 14, 205);
+      font-family: 'Times New Roman', Times, serif;
+      
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: green;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s; /* Efecto de transición */
+    }
+    button:hover {
+      background-color: darkgreen; /* Color al pasar el mouse */
+    }
+    button:active {
+      transform: scale(0.95); /* Efecto de presión */
+      background-color: #005700; /* Color más oscuro al presionar */
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;"><img src="acetosella.jpeg" alt="Image of Rumex acetosella" width="300" height="200"></div>
+  <p>ACEDORRILLA</p>
+  <h1 id="plant-name">Rumex acetosella L</h1>
+  <center>
+    <e style="color: black; text-align: justify;">Planta que crece hasta 40 centímetros, 
+      sus hojas son de unos 6 centímetros 
+      de largo y muy alargadas. Las flores 
+      aparecen en las puntas de los tallos 
+      rojizas o amarillas.
+    </e>
+  </center>
+  <h2 style="color: blue;"><center>USOS:</center></h2>
+  <center>
+    <tex style="text-align: justify;">Alimento: se puede comer pero 
+      se tiene que cocer y comer en pequeñas
+      cantidades ya que puede 
+      llegar a ser tóxica. 
+      Laxante: se bebe la infusión pero 
+      en pequeñas cantidades.
+      Antiséptica.
+      Ligeramente tóxica
+    </tex>
+  </center>
+  <center><button onclick="searchGoogle()">Más Información</button></center>
+  <script>
+    function searchGoogle() {
+      var plantName = document.getElementById('plant-name').innerText;
+      var query = encodeURIComponent(plantName);
+      window.location.href = 'https://www.google.com/search?q=' + query;
+    }
+  
+    function copyToClipboard() {
+      var plantName = document.getElementById('plant-name').innerText; // Obtener el texto del h1
+      navigator.clipboard.writeText(plantName) // Copiar el texto al portapapeles
+        .then(function() {
+          alert('Texto copiado al portapapeles: ' + plantName); // Mensaje de confirmación
+        })
+        .catch(function(err) {
+          console.error('Error al copiar: ', err); // Manejo de errores
+        });
+    }
+  </script>
+</body>
+</html>

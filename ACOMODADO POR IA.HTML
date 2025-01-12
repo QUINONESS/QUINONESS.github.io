@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Información sobre la planta Borraja, Borrega, rabo de alacrán.">
+    <link rel="apple-touch-icon" href="icon.png">
+    <title>Borraja, Borrega, rabo de alacrán.</title>
+    <style>
+        body {
+            background-color: rgba(163, 223, 163, 0.874);
+        }
+        p {
+            text-align: center; 
+            color: green;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        h1 {
+            text-align: center; 
+            color: green;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        button:hover {
+            background-color: darkgreen; 
+        }
+        button:active {
+            transform: scale(0.95); 
+            background-color: #005700; 
+        }
+    </style>
+    <script>
+        function searchGoogle() {
+            var plantName = document.getElementById('plant-name').innerText;
+            var query = encodeURIComponent(plantName);
+            window.location.href = 'https://www.google.com/search?q=' + query;
+        }
+    </script>
+</head>
+<body>
+    <center><img src="ALMIS.jpg" alt="Imagen de Abelmoschus moschatus" width="300" height="200"></center> 
+    <p>Almis, Kouapajxiuit, Santa Elena, Alvira, borraja, hierba de culebra, hierba de semilla de culebra. Oaxaca: zaandy ujts; San Luis Potosí: bomba kapel, k’winim lal (tenek).</p>
+    <p>Es una hierba que llega a crecer un metro de alto. Su tallo y su hoja tienen pelitos duros que se clavan. Las flores son amarillas y blancas pequeñas.</p>
+    <h2>USOS:</h2>
+    <p>Mordedura de víbora: se tiene que beber una infusión de la semilla luego de haberla tostado y molido. Tos y asma: se remojan las semillas y se comen. Dolor de estómago: se come el fruto machacado y remojado en agua.</p>
+    <h1 id="plant-name">Abelmoschus moschatus Medikus</h1>
+    <p>Es una hierba que llega a crecer un metro de alto. Su tallo y su hoja tienen pelitos duros que se clavan. Las flores son amarillas y blancas pequeñas.</p>
+    <h2>USOS:</h2>
+    <p>Mordedura de víbora: se tiene que beber una infusión de la semilla luego de haberla tostado y molido. Tos y asma: se remojan las semillas y se comen. Dolor de estómago: se come el fruto machacado y remojado en agua.</p>
+    <center><button onclick="searchGoogle()">Más Información</button></center>
+</body>
+</html>

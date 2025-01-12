@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="icon.png">
+    <title>PLANT-MASTER®</title>
+    <button onclick="mostrarTelefono()">NUMERO DE TELEFONO</button>
+    <button onclick="window.location.href = 'index.html'">INICIO</button>
+  
+    <script>
+      function mostrarTelefono() {
+        const boton = document.querySelector('button');
+        boton.textContent = '+1 (800) 242-8478'; 
+        setTimeout(() => {
+          location.reload();
+        }, 5000); 
+      }
+  
+      // Script para agrandar la imagen al hacer clic
+      function toggleImageSize() {
+        const img = document.getElementById('imagenAgrandable');
+        img.classList.toggle('agrandada');
+      }
+    </script>
+  
+    <style>
+      button {
+        align-items: center;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: 'Arial', sans-serif;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+  
+      button:hover {
+        background-color: #45a049;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+      }
+  
+      button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+  
+      html {
+        height: 100%;
+        width: 100%;
+      }
+  
+      
+  
+      
+  
+      .StripesMenuItem {
+        list-style: none;
+        margin: 0px 20px 0px 0px;
+        padding: 0px;
+        text-align: left;
+      }
+    </style>
+    <style>
+        body {
+            background-color: rgba(163, 223, 163, 0.874);
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        p {
+            text-align: center; 
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center; 
+            color:blue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        h2{
+            color: blue;
+            
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        button:hover {
+            background-color: darkgreen; 
+        }
+        button:active {
+            transform: scale(0.95); 
+            background-color: #005700; 
+        }
+    </style>
+    <style>
+        body {
+            background-color: rgba(163, 223, 163, 0.874);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        button:hover {
+            background-color: darkgreen; 
+        }
+        button:active {
+            transform: scale(0.95); 
+            background-color: #005700; 
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function searchGoogle() {
+            var plantName = document.getElementById('plant-name').innerText;
+            var query = encodeURIComponent(plantName);
+            window.location.href = 'https://www.google.com/search?q=' + query;
+        }
+    </script>
+</head>
+<body>
+    <img src="POLEBO.jpg" alt="POLEBO" width="300" height="200">
+    <p>POLEBO</p>
+    <h1 id="plant-name">Satureja macrostema Bentn</h1>
+    <p style="text-align: justify;">
+        Arbusto que crece hasta 3 m de alto, sus ramas tienen 
+        pelillos, tiene hojas largas y puntiagudas con dientes en los 
+        bordes, son verde oscuro pero con reverso pálido, las flores 
+        son rosas y amarillas, y surgen en grupos de una a tres.
+        Crece de la raíz, como el pasto. Tiene buen sabor y huele 
+        a toronjil. Crece donde lo plantan, a las orillas del camino y 
+        del canal. Es una planta caliente.
+    </p>
+    <h2>USOS:</h2>
+    <p style="text-align: justify;">
+        Dolor de estómago, indigestión, cólicos y malestares digestivos: 
+        se hierve el agua y se le agregan ramas con hojas, frescas o no, 
+        y se deja entre tres y cinco minutos. Se debe preparar cada vez 
+        que se va a tomar. Se toma una taza de la infusión antes de cada 
+        comida, hasta que el malestar desaparezca. También es una infusión 
+        estimulante, tomada después de comida, sobre todo en la mañana y 
+        en la noche, con miel o azúcar.<br>
+        Baños postparto: en infusión con ruda (Ruta chalepensis), malva 
+        (Malva parviflora), árnica (Heterotheca inuloides), tronadora 
+        (Tecoma stans), tatalencho (Selloa glutinosa), santamaría 
+        (Chrysantemum parthenium), hediondilla (Chenopodium murale), 
+        estafiate (Artemisa mexicana), poleo (Cunila lythrifolia), 
+        nogal (Juglans sp.), pingüica (Arctostaphylos pungens), 
+        romero (Rosmarinus officinalis), epazote de zorrillo 
+        (Teloxys graveolens), eucalipto (Eucalyptus spp.) y un ramo de piru 
+        (Schinus molle).<br>
+        Cólicos menstruales.<br>
+        Tos.<br>
+        Estimulante.
+    </p>
+    <center><button onclick="searchGoogle()">Más Información</button></center>
+</body>
+</html>

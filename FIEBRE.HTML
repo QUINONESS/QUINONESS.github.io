@@ -1,0 +1,338 @@
+<html>
+<head>
+
+  <title>PLANT-MASTER</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <button onclick="mostrarTelefono()">NUMERO DE TELEFONO</button>
+  <button onclick="window.location.href = 'index.html'">INICIO</button>
+
+  <script>
+    function mostrarTelefono() {
+      const boton = document.querySelector('button');
+      boton.textContent = '+1 (800) 242-8478'; 
+      setTimeout(() => {
+        location.reload();
+      }, 5000); 
+    }
+  </script>
+
+  <style>
+    button {
+      align-items: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'Arial', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background: #2dba17;
+      background-size: 100% 100%;
+    }
+
+    li {
+      font-family: "Lucida Sans Unicode";
+      font-size: 11pt;
+      font-style: normal;
+      line-height: normal;
+      padding: 0px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .StripesMenuItem {
+      line-height: 45px;
+      background: rgba(12, 108, 41, 0.24);
+      margin-bottom: 10px;
+    }
+
+    .StripesMenuList {
+      list-style: none;
+      margin: 0px 20px 0px 0px;
+      padding: 0px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <BR></BR>
+ <p><img src="plantas medicinales.gif" width="325" height="50" alt=""></p>
+
+    
+
+    <P> <CENTER style="font-size: 25px;">PARA LA FIEBRE</CENTER></P>
+    <STYle> 
+        CENTER {
+            font-family: 'Times New Roman', Times, serif;
+            font-size:50px;
+            color:rgb(95, 27, 27);
+            border-radius: 20px;
+            animation:infinite;
+
+         }
+    </STYle>
+  <div>
+    <h1 style="color: rgb(223, 7, 7); font-family: 'Times New Roman', Times, serif;">BUSCADOR DE PLANTAS</h1>
+    <input type="text" id="search" placeholder="BUSCAR PLANTAS..." onkeyup="searchFiles()">
+    <ul id="fileList"></ul>
+
+    <script>
+      const files = [
+        "ACEDORRILLA.HTML",
+        "ACOMODADO POR IA.HTML",
+        "ACOYO.HTML",
+        "AJENJO.HTML",
+        "ALFOMBRILLA.HTML",
+        "ALMIS.HTML",
+        "AMAPOLA DE CAMPO.HTML",
+        "ANCITO.HTML",
+        "AÑIL.HTML",
+        "arnica.html",
+        "ARRAYAN.HTML",
+        "AZOMIATE.HTML",
+        "BALLETILLA.HTML",
+        "BORRAJA,BORREGA,RAVO DE ALACRAN.HTML",
+        "BRETONICA.HTML",
+        "CABEZONA.HTML",
+        "CALAGIALA.HTML",
+        "CAÑA DE JABALI.HTML",
+        "CAPULIN.HTML",
+        "CARDO DE MARIA.HTML",
+        "CARDO.HTML",
+        "CENICILLA.HTML",
+        "CERDON.HTML",
+        "CHICHICASATE.HTML",
+        "CHIPULILLO.HTML",
+        "cola de caballo.html",
+        "COLA DE ZORRO.HTML",
+        "COLICOS.HTML",
+        "CONGORA.HTML",
+        "CRUZ DULCE CHICA.HTML",
+        "DIABETEZ.HTML",
+        "DOLOR DE ESTOMAGO.HTML",
+        "DURAZNO.HTML",
+        "ENCINO.HTML",
+        "ENELDO.HTML",
+        "EPAZOTE DE ZORRILLO.HTML",
+        "epazote.html",
+        "ESPINOCILLA.HTML",
+        "estafiate.html",
+        "EUCALIPTO.HTML",
+        "FELVIRA.HTML",
+        "FIÑO GOLPE.HTML",
+        "FRIJOL DE VARA.HTML",
+        "GERANIO.HTML",
+        "GIRASOL.HTML",
+        "GORDOLOBO.html",
+        "GUAYABA.HTML",
+        "GUAZIMA.HTML",
+        "hierba de las ánimas.HTML",
+        "HIERVA BUENA LISA.HTML",
+        "HIERVA DE CRISTO.HTML",
+        "HIERVA DE POLLLO.HTML",
+        "HIERVA DE POZUÑA.HTML",
+        "HIERVA DE SAN NICOLAS.HTML",
+        "HIERVA DE SAPO.HTML",
+        "HIERVA DEL CANCER.HTML",
+        "HIERVA DEL COYOTE.HTML",
+        "HIERVA DEL GOLPE.HTML",
+        "HIERVA DEL ZOPILOTE.HTML",
+        "HIERVA DULCE.HTML",
+        "HIERVA MORA.HTML",
+        "HIERVA SANTA.HTML",
+        "HIERVABUENA DE MENTA.HTML",
+        "HIGUERA.HTML",
+        "HUICHIN.HTML",
+        "JARRILLA DE LOMA .HTML",
+        "lengua de vaca.html",
+        "LIQUIDAMBAR.HTML",
+        "MAIZ.HTML",
+        "MALVA LISA.HTML",
+        "MANO DE LEON .HTML",
+        "MARRUBIO.HTML",
+        "MOZOTE.html",
+        "MUICLE.HTML",
+        "NOGAL.HTML",
+        "NTR`A CONU.HTML",
+        "PALO BOBO .HTML",
+        "PALO DE ZORRO.HTML",
+        "PARA LA GRIPA.HTML",
+        "PARA LA GRIPE.HTML",
+        "PARA LA TOS.HTML",
+        "partos.HTML",
+        "PERICO.HTML",
+        "PIRU.HTML",
+        "plant-master.png",
+        "QUELITE INF.html",
+        "ROMERO.HTML",
+        "ROSA CIELO.HTML",
+        "RUDA.HTML",
+        "SABILA.HTML",
+        "SALVIA.HTML",
+        "SANTA MARIA.HTML",
+        "SAUCO.HTML",
+        "SECAPALO.HTML",
+        "SIEMPREVIVA.HTML",
+        "simonillo.html",
+        "TALAMAT.HTML",
+        "TEJOCOTE.html",
+        "TEPOTZITO.HTML",
+        "TLALQUILIN.HTML",
+        'ZOAPATLE.HTML',
+        'TOLACHE.HTML',
+        'TOMATE DE PUNZADA.HTML',
+        'Tzana na xuru.HTML',
+        'VARA DE FLOR.HTML',
+        'VERDOLAGA.HTML',
+        'YERVA MORA.HTML',
+        'ZOAPATLE.HTML',
+        'TRES OJITAS.HTML',
+        'TODOS.HTML',
+        'MARRUBIO.HTML',
+        'CAÑA DE JABALI.HTML',
+        'PARA LA GRIPE.HTML',
+        'CARDO.HTML',
+        'DIABETEZ.HTML',
+        'HIERVA DE CRISTO.HTML',
+        'MALVA LISA.HTML',
+        'CONGORA.HTML',
+        'AMAPOLA DE CAMPO.HTML',
+
+      ];
+
+      function searchFiles() {
+        const input = document.getElementById('search').value.toLowerCase();
+        const fileList = document.getElementById('fileList');
+        fileList.innerHTML = '';
+
+        files.forEach(file => {
+          if (file.toLowerCase().includes(input)) {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${file}" target="_blank">${file}</a>`;
+            fileList.appendChild(li);
+          }
+        });
+      }
+    </script>
+  </div>
+
+  <ul id="mainMenuList" class="StripesMenuList"><li data-layout="menuitem" id="li1" class="StripesMenuItem">
+    <a data-layout-editable="link" class="StripesMenuTitle" href="SABILA.html"><img src="sabila.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color: #b9c1b7;">SABILA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li1" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="VERDOLAGA.HTML"><img src="VERDOLAGA 1.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">VERDOLAGA </span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li1" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="AZOMIATE.HTML"><img src="AZOMIATE.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">AZOMIATE</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="PALO DE ZORRO.HTML"><img src="PALO DE ZORRO.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">PALO DE ZORRO</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li1" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="MANO DE LEON .HTML"><img src="MANO DE LEON.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">MANO DE LEON</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li1" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="CABEZONA.HTML"><img src="CABEONA.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">CABEZONA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="MALVA LISA.HTML"><img src="MALVA.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">MALVA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="CARDO.HTML"><img src="CARDO.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">CARDO</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="ESPINOCILLA.HTML"><img src="ESPINOCILLA.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">ESPINOCILLA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="TLALQUILIN.HTML"><img src="TLALQUILIN.JPG" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">TLALQUILIN</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="SANTA MARIA.HTML"><img src="SANTA MARIA.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">SANTA MARIA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="GUAYABA.HTML"><img src="GUAYABA.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">GUAYABA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="RUDA.HTML"><img src="RUDA.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">RUDA </span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="SIEMPREVIVA.HTML"><img src="SIEMPRE VIVA.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">SIEMPREVIVA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="HIERVA DEL ZOPILOTE.HTML"><img src="HIERVA DEL ZOPILOTE.jpeg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">HIERVA ZOPILOTE</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="ALFOMBRILLA.HTML"><img src="ALFOMBRILLA.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">ALFOMBRILLA</span></a>
+    </li>
+
+    <li data-layout="menuitem" id="li2" class="StripesMenuItem">
+        <a data-layout-editable="link" class="StripesMenuTitle" href="ROSA CIELO.HTML"><img src="ROSA CIELO.jpg" width="50" height="45" style="margin-left: 100px; color: white;"><span data-layout-editable="text" style="margin-left: 15px;color:  #b9c1b7;">ROSA CIELO </span></a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </ul>
+</div>
+</body>
+</html>
